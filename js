@@ -1,5 +1,7 @@
-const firebaseConfig = {
-  apiKey: "AIzaSyCg70dX0gMgKaY0ISTuBQr4WiVK_JP8vdc
-",
-  ...
-};
+var admin = require("firebase-admin");
+
+var serviceAccount = require("path/to/serviceAccountKey.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
